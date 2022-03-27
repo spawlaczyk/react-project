@@ -1,0 +1,36 @@
+@use "sass:math";
+@import '../../styles/settings.scss';
+
+nav {
+  background-color: darken($color-dark, 3%);;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+}
+
+.icon::before {
+  padding-right: $base-size;
+  color: $color-light;
+  font-size: ($base-size * 2);
+}
+
+ul {
+  list-style-type: none;
+  li {
+    display: inline-block;
+    a {
+      text-decoration: none;
+      color: $color-light;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
