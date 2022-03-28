@@ -34,3 +34,8 @@ ul {
     }
   }
 }
+
+.linkActive {
+  color: $color-warning;
+  transition: $transition
+}
