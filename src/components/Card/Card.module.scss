@@ -11,3 +11,14 @@
   justify-content: space-between;
   font-weight: bold;
 }
+
+button {
+  border: none;
+  background: none;
+  color: $color-dark;
+  cursor: pointer;
+}
+
+.isFavorite {
+  color: $color-warning;
+}

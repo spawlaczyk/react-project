@@ -1,5 +1,5 @@
 import PageTitle from "../PageTitle/PageTitle";
-import styles from '../Hero/Hero.module.scss';
+import styles from '../About/About.module.scss';
 
 const About = () => {
   return (
