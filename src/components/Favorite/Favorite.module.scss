@@ -16,12 +16,12 @@
   color: $color-dark;
 }
 
-ul {
+.favCards {
   padding: 0;
-}
 
-.fav {
-  color: $color-warning;
+  span {
+    color: $color-warning;
+  }
 }
 
 @media (max-width: 767px) {

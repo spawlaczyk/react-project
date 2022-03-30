@@ -5,23 +5,28 @@ import Card from "../Card/Card";
 import { useSelector } from "react-redux";
 import { getFavoriteCards } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import clsx from "clsx";
 
-const Favorite = () => {
+const Favorite = props => {
   const favoriteCard = useSelector(state => getFavoriteCards(state));
-  let navigate = useNavigate();
+  let navigate = useNavigate('/');
 
-  if(favoriteCard.length === 0){
-    navigate('/');
-    return <PageTitle>No favorite cards</PageTitle>
-  }
+  useEffect (() => {
+    if(favoriteCard.length === 0){
+      setTimeout(() => navigate('/'), 1500)
+    }
+  });
+
+  
 
   return (
     <div className={styles.hero}>
       <PageTitle>Favorite</PageTitle>
       <Container>
         <div className={styles.column}>
-          <ul>
-            {favoriteCard.map(card => <Card key={card.id} cardId={card.id} title={card.title} className='fav'/>)}
+          <ul className={styles.favCards}>
+            {favoriteCard.map(card => <Card key={card.id} cardId={card.id} title={card.title}/>)}
           </ul>
         </div>
       </Container>
