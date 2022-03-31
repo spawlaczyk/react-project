@@ -7,6 +7,10 @@
   padding: 10px;
 }
 
+span {
+  margin: 0 10px 0 10px;
+}
+
 @media (max-width: 767px) {
   .columnForm > * {
     display: inline-flex;
