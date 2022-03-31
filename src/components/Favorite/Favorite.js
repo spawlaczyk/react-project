@@ -3,10 +3,9 @@ import styles from '../Favorite/Favorite.module.scss';
 import Container from '../Container/Container';
 import Card from "../Card/Card";
 import { useSelector } from "react-redux";
-import { getFavoriteCards } from "../../redux/store";
+import { getFavoriteCards } from "../../redux/cardsRedux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import clsx from "clsx";
 
 const Favorite = props => {
   const favoriteCard = useSelector(state => getFavoriteCards(state));
