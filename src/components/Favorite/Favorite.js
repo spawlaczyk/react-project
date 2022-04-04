@@ -20,7 +20,8 @@ const Favorite = props => {
   
 
   return (
-    <div className={styles.hero}>
+    <>
+    {favoriteCard.length ? <div className={styles.hero}>
       <PageTitle>Favorite</PageTitle>
       <Container>
         <div className={styles.column}>
@@ -29,7 +30,8 @@ const Favorite = props => {
           </ul>
         </div>
       </Container>
-    </div>
+    </div> : <PageTitle>Nothing there</PageTitle>}
+    </>
   );
 }
 
